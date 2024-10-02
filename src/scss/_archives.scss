@@ -1,0 +1,100 @@
+/* Archives */
+
+// Filtering and Pagination 
+ul.block-links {
+	list-style: none;
+	display: flex;
+	margin: 0;
+	padding: 0;
+	justify-content: center;
+
+	li {
+		padding: .5rem;
+
+		a {
+			@extend .block-link;
+			color: $grey;
+			cursor: pointer;
+
+			a:hover {
+				color: $grey;
+			}
+
+			&:after {
+				content: none !important;
+			}
+		}
+
+		&.active a {
+			color: $lightest-grey;
+			box-shadow: inset 120px 0 0 0 $red;
+		}
+	}
+}
+
+.navbar {
+	background: $grey;
+	padding: 1rem 1.5rem;
+	display: flex;
+	justify-content: end;
+	color: white;
+
+	a {
+		display: block;
+		margin-left: 1rem;
+	}
+}
+
+.archive_filter, .archive_sub-filter {
+	text-align: center;
+	overflow-x: scroll;
+}
+
+.archive_sub-filter {
+	ul.block-links a {
+		font-size: .825rem;
+	}
+}
+.rdt_TableRow {
+    a {
+        display: inline;
+    }
+}
+
+
+// Loader 
+.loader-container {
+    width: 100%;
+    padding: 2rem;
+}
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: relative;
+    animation: rotate 1s linear infinite;
+    display: block;
+    margin: 0 auto;
+  }
+  .loader::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0px;
+    border-radius: 50%;
+    border: 5px solid $grey;
+    animation: clipSpin 2s linear infinite ;
+  }
+
+  @keyframes rotate {
+    100%   {transform: rotate(360deg)}
+  }
+
+  @keyframes clipSpin {
+      0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+      25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+      50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+      75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+      100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+  }
+

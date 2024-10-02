@@ -1,0 +1,20 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "concertsarchive/concerts-archive",
+  "version": "0.1.0",
+  "title": "Concerts Archive",
+  "category": "embed",
+  "icon": "tickets-alt",
+  "description": "The block to render my Concerts Archive block.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "concerts-archive",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}

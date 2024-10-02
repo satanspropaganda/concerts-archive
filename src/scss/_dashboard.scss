@@ -1,0 +1,54 @@
+/* Stats Boxes */ 
+
+.stats_box {
+    background: $light-grey;
+    padding: 1rem;
+    color: white;
+    margin-bottom: 2rem;
+    @media screen and (min-width: 37.5em) {
+        margin-bottom: 0;
+    }
+    
+    span {
+        font-size: 1.25rem;
+        display: block;
+        margin-bottom: .5rem;
+        font-weight: 500;
+    }
+    p {
+        font-size: 2.5rem;
+        margin-top: 0;
+        margin-bottom: 1.25rem;
+        font-weight: 700;
+    }
+
+    &.stats_box-headline {
+        width: 100%;
+        margin-bottom: 2rem;
+        display: block;
+        span {
+            font-size: 1.5rem;
+            margin-bottom: .75rem;
+        }
+        p {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+.stats_row {
+    margin-bottom: 2rem;
+    @media screen and (min-width: 37.5em) {
+        display: flex;
+        justify-content: space-between;
+        gap: 1.33rem;
+        .stats_box {
+            flex-grow: 1;
+        }
+    }
+}
+
+.dashboard-map {
+    height: 30rem;
+}

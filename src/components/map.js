@@ -9,7 +9,7 @@ export default function map({markers, center}){
         )
     }
     return (
-        <APIProvider apiKey={'AIzaSyAOxrGyNJOavcjOVLSRHBQ-R449Z0D8P0o'}>
+        <APIProvider apiKey={'MAPS_API_KEY'}>
             <Map defaultZoom={5} defaultCenter={center}>
                 {Object.keys(markers).map(key => (
                     <Marker key={key} position={{lat: markers[key].lat, lng: markers[key].lng}} />
